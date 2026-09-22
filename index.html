@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSV Lab | Official Website</title>
+    <meta name="description" content="RSV Lab advances antimicrobial susceptibility testing, AMR surveillance, and bioinformatics research. Founded by Kamol Das, Department of Microbiology, University of Chittagong.">
+    <link rel="canonical" href="https://rsv8lab.github.io/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#06283d">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RSV Lab | Official Website">
+    <meta property="og:description" content="Advancing antimicrobial susceptibility testing, AMR surveillance, and bioinformatics research. Founded by Kamol Das.">
+    <meta property="og:url" content="https://rsv8lab.github.io/">
+    <meta property="og:image" content="https://rsv8lab.github.io/rsvlab-logo.png">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Favicon: your own logo, embedded as base64 so no hosting is required -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAKm0lEQVR4nHWXa3RUVZbHf+feW3WrUnmZJ4kQAhgDCUGJQAQUEVpR1AZsX0zbw+iMjq7FdDtOy/Ry1kyP7cg42i1IOzqtoOKshm6bXgG1QUAYEBLEQJBgAoGQkBdJ5V2Vede958yHIolKPB/uuuvce/b+7//e++y9RSTgVVxZ2ugbKAEKECiEEoy/RvYTB6X49hchFTjdqM46RFc7joWrgRhgABFad2/B+B7J3xI8/r4AZV3RZqCQCCX4NlYFCjSHJPDFu+wN9aJhcX2nQUp0mI4zn6B9n3iFSlgxruEmQvdgDddi+Y4jdA9CmAgSLAo1glGDeASySzFSLThbh21k4nQ6GKr/C+QWjw8AAUKJBPVqjGahmdjhC8T7KkEYCM0E3QVCJ96/Czt0AaGZCbeNCrORWjKuWUtZmRFmzjUpNMxcir+smGmLl4254JuWiu9hXskYetJM7MBp7GgnmqcElETGulB2ACO5BKXi3zmlIawgFD9CsPYuWk9m0jZcjW8gzsLVdyAiAa8S31CqxqVdITQXMX8ddrQXR+adKBlEXf41yDD6xH9B6anYQ4fRDQ9Gyo0oGRmTpGwwM9Dqfo3oayIW9sLURxEzViZcMKpcXDlyFQKBbUdIyrielPxyXMlO3Elx5OBerL5PMfVBXB4TT+Z0lFmIbUe+LUToqLgPWfIUlr+eU/50xIz7UeFBDHHFaiWuABHqSvBfQaNAITHdLhou9lJ/vpVjh1+jaNYiHl+2HtNQnLhgcPDQ2yxeOI95c0vBjhALRRFCS4SQUghhYMd8NA8IbsjzockgltDRhBrTJcYMHgUipcSZnMLGLb/n1fV/y/mqX/Kw+8/s/MWDvL/Xy5FzHn6xcTMqeyrPvLGDB574FVXHz+J0u7BtmZCpJJqRjPnlJmrtCloGnOgXt6Gc6YjYsFeNBPp3g09KiZmawptb9/D7rf9K1Qs5hMJunGnpfP7qAV7wlpFWMpsnH/sbNI+b7gjsOnaG86cb2PnM3RSXXU/Y78NhJiM7m6jb9SDZS17GOtqAU3xC7pqPvpmG6irlDk8Su3Z/zrmTv+GFv8uhvs7LuvfaON94GXfESUttDT0DPRQUTmbL1j/wxcH/4/6lFWTeejs/e70Sb1cvumGA5iRSu4O9dhH7j54g2BWkv0sndPEbAK7KPKXQdBdHqj7lubtjlE5x4rNs8tJ1JsW9uNMlTiuM29TJz0xlwbw57N53BLu7g7nTC6kumMPr2z7DmZSE9A0Qaqvi6WWPsOrBJ9HWvUj35Ado4/z6r0JQr8OEuEkY+3MyRUJl4XFy0+dvsHJZ0pXOfXc/+jrz7fzP1a3lhZJKgCkfSpNn7Xf4hCTLxAI2FZ+/pQvv/PlZ/L3f/IL79//AqYtdWK4kZG8LdV+/j3fZK4TCFvVehc/S6WhtIn3RanwXTuDrbccMBdCcTiZOncllTz/L9x99mKAvgOa20L0lXKq/wD+9uJPq6dexdMU9DA35CQ8FMHUdW6UyHNJgUHOgdCe6ZuNU/RhOF37VgxJp5E+bTvOWXQz19MVn8LMBIP+A2LCB0nkuqk6h+1KWlXWVpk8+xVA3hFVK4mB6TZKQQkPTLNwmuJTAsi06AwFO7dvBmndeoK25FaWZTF2wgtnrH+PS5oNklFcy8+H1lJZP4Kv3d5CS5uCa316NJdOEQyGCTgeaZdE1EEQfusL0BdVMfPBhLu49yGDzOU4c/pT57S28ULMFm1Sc3ku0nDrLxNULsYZs3B4nydlpXHnvXWJHz+P0eNGSXbjyq5j+9BMU3XA9wcHAqIn7z0Lq7+PDGwoIt/YQvHIeR9Y0MidP48ntWzB1kzmVczja3Iir1o/PdmNoJlrIx5RQNy/df4jaLZ/y+HN3E4iF2VF3BLszmYnT57Dr9Y+YWHIddcePofm7cYU7GG5tYspEP/Yol0lLdaLZBrY1SP/pTlrPd6Fa2rBcCoumBnG4TAY9CQx5EmirbcW0+jFyPPT0RRjs9OFwmXjdFo1Nfoq8AZwFbnrbg0RiCiwbbyaMPzHM3lPnaWjqIC/tvwF4d3IJRHf4mQAAAABJRU5ErkJggg==">
+    <!-- Apple touch icon: separate file, upload apple-touch-icon.png alongside index.html -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured data: helps Google show RSV Lab as an Organization with sameAs profile links -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RSV Lab",
+        "url": "https://rsv8lab.github.io/",
+        "description": "Advancing antimicrobial susceptibility testing, AMR surveillance, and bioinformatics research.",
+        "founder": {
+            "@type": "Person",
+            "name": "Kamol Das",
+            "affiliation": "University of Chittagong",
+            "sameAs": [
+                "https://github.com/KamolDas",
+                "https://orcid.org/0009-0004-2253-7527"
+            ]
+        },
+        "sameAs": [
+            "https://github.com/rsv8lab",
+            "https://www.facebook.com/profile.php?id=100090153347276",
+            "https://www.youtube.com/@RSVLab"
+        ]
+    }
+    </script>
+
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            /* RSV Lab brand colors */
+            --primary-orange: #FF8C00;
+            --primary-purple: #7614DC;
+            --primary-blue: #1E90FF;
+            --dark-navy: #06283d;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --text-main: #1f2937;
+            --text-muted: #64748b;
+
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Source Serif 4', serif;
+
+            --card-padding: 35px;
+            --grid-gap: 30px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        a { text-decoration: none; color: var(--primary-blue); transition: color 0.2s; }
+        a:hover { color: #084a8f; }
+        a:focus-visible, button:focus-visible { outline: 2px solid var(--primary-blue); outline-offset: 2px; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
+        .visually-hidden {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition: none !important; animation: none !important; }
+        }
+
+        /* --- Layout --- */
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: -0.5px;
+            color: var(--dark-navy);
+        }
+        .section-title span { color: var(--primary-orange); }
+        .section-title .purple { color: var(--primary-purple); }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        /* --- Header & Nav --- */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+        .nav-logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--dark-navy);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-logo span { color: var(--primary-orange); }
+        .nav-logo .purple { color: var(--primary-purple); }
+        .nav-links { display: flex; gap: 35px; font-weight: 600; font-size: 0.95rem; }
+        .nav-links a { color: var(--dark-navy); }
+        .nav-links a:hover { color: var(--primary-blue); }
+        .nav-icons a { margin-left: 20px; font-size: 1.2rem; color: var(--text-muted); }
+        .nav-icons a:hover { color: var(--primary-blue); }
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; color: var(--dark-navy); cursor: pointer; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-icons { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--border-color);
+                padding: 20px;
+                gap: 18px;
+            }
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: var(--white);
+            padding: 60px 0 80px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero-banner {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: block;
+        }
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            color: var(--dark-navy);
+        }
+        .hero-title span { color: var(--primary-orange); }
+        .hero-title .purple { color: var(--primary-purple); }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+        }
+        .founder-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFF7ED;
+            color: #c2410c;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid #fed7aa;
+        }
+        .founder-badge img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* --- Universal card system --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--grid-gap);
+            align-items: stretch;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: var(--card-padding);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border-top: 5px solid var(--card-accent, var(--primary-blue));
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06);
+            border-color: #cbd5e1;
+        }
+        .card-icon { font-size: 2rem; color: var(--card-accent, var(--primary-blue)); margin-bottom: 20px; }
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--dark-navy);
+        }
+        .card-text { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 20px; }
+        .card-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--card-accent, var(--primary-blue));
+            margin-top: auto;
+        }
+
+        /* --- Publications --- */
+        .publication-list { display: grid; grid-template-columns: 1fr; gap: 25px; }
+        .publication-item {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            transition: box-shadow 0.3s;
+            border-left: 5px solid var(--primary-orange);
+        }
+        .publication-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .pub-title { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--dark-navy); }
+        .pub-authors { font-size: 0.95rem; color: var(--text-muted); }
+        .pub-authors strong { color: var(--text-main); }
+        .pub-journal { font-style: italic; font-size: 0.9rem; color: var(--text-muted); }
+        .pub-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 5px; }
+        .pub-link {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+        .pub-link:hover { background: var(--primary-blue); color: var(--white); border-color: var(--primary-blue); }
+
+        /* --- Projects (filter tabs) --- */
+        .project-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+        .project-tabs button {
+            padding: 10px 24px;
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-main);
+        }
+        .project-tabs button.active, .project-tabs button:hover {
+            background: var(--primary-purple);
+            color: var(--white);
+            border-color: var(--primary-purple);
+        }
+
+        /* --- Founder Section --- */
+        .founder-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            max-width: 950px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+        .founder-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f0f4f8;
+            flex-shrink: 0;
+            background: #e2e8f0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .founder-info h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 5px; color: var(--dark-navy); }
+        .founder-info .role { color: var(--primary-orange); font-weight: 700; margin-bottom: 15px; font-size: 1.1rem; }
+        .founder-info p { color: var(--text-muted); margin-bottom: 20px; }
+        .founder-social { display: flex; gap: 20px; }
+        .founder-social a { font-size: 1.6rem; color: var(--text-muted); transition: color 0.2s; }
+        .founder-social a:hover { color: var(--primary-blue); }
+
+        @media (max-width: 768px) {
+            .founder-container { flex-direction: column; text-align: center; padding: 30px; gap: 30px; }
+            .founder-social { justify-content: center; }
+        }
+
+        /* --- Contact Section --- */
+        .contact-section { background-color: var(--white); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .contact-card {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06); }
+        .contact-icon { font-size: 2.5rem; margin-bottom: 20px; color: var(--card-accent, var(--primary-blue)); }
+        .contact-title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; color: var(--dark-navy); }
+        .contact-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; }
+        .contact-text a { color: var(--primary-blue); font-weight: 500; }
+        .contact-text a:hover { text-decoration: underline; }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--white) !important;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+        .social-btn:hover { transform: scale(1.05); text-decoration: none !important; }
+
+        /* --- Footer --- */
+        .footer {
+            background: var(--dark-navy);
+            color: #94a3b8;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .footer a { color: #cbd5e1; }
+        .footer a:hover { color: var(--white); }
+        .footer-links { display: flex; justify-content: center; gap: 20px; margin-top: 15px; flex-wrap: wrap; }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            :root { --card-padding: 25px; --grid-gap: 20px; }
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .section-title { font-size: 1.8rem; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="nav-logo">
+                <img id="navLogoImg" src="" alt="" style="height: 30px; border-radius: 4px;" onerror="this.style.display='none'">
+                <span>RSV</span> <span class="purple">Lab</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#founder">Founder</a>
+                <a href="#contact">Contact</a>
+                <a href="community/index.html">Community</a>
+            </nav>
+            <div class="nav-icons" id="navIcons"></div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <img id="heroBanner" src="https://raw.githubusercontent.com/rsv8lab/rsv8lab/main/banner.png" alt="RSV Lab banner" class="hero-banner" loading="lazy" onerror="this.style.display='none'">
+
+            <h1 class="hero-title">RSV <span class="purple">Lab</span></h1>
+            <p class="hero-subtitle">
+                An Integrated Computational Framework for Microbiology, Antimicrobial Susceptibility Testing, and Bioinformatics Research.
+            </p>
+            <div class="founder-badge" id="founderBadge"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About <span>RSV</span> <span class="purple">Lab</span></h2>
+            <p class="section-subtitle">
+                We bridge the gap between traditional microbiology and modern computational analysis, focusing on antimicrobial resistance surveillance and CLSI/EUCAST-compliant susceptibility testing.
+            </p>
+            <div class="card-grid" id="aboutGrid"></div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section" id="publications" style="background-color: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Recent <span>Research</span> &amp; Publications</h2>
+            <p class="section-subtitle">Our latest contributions to the scientific community, available via open-access repositories.</p>
+            <div class="publication-list" id="pubList"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Our <span class="purple">Projects</span></h2>
+            <p class="section-subtitle">Open-source tools and research repositories developed by RSV Lab and its founder.</p>
+            <div class="project-tabs">
+                <button class="active" onclick="filterProjects('all', event)">All</button>
+                <button onclick="filterProjects('lab', event)">RSV Lab Repos</button>
+                <button onclick="filterProjects('personal', event)">Founder's Repos</button>
+            </div>
+            <div class="card-grid" id="projectGrid"></div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section" id="founder" style="background-color: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Meet the <span>Founder</span></h2>
+            <div class="founder-container" id="founderContainer"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact <span>RSV</span> <span class="purple">Lab</span></h2>
+            <p class="section-subtitle">Get in touch with RSV Lab for collaborations, research inquiries, or general questions.</p>
+            <div class="contact-grid" id="contactGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footerCopyright"></p>
+            <div class="footer-links" id="footerLinks"></div>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         SITE CONFIG — edit everything about the lab/site here.
+         Nothing below this block needs to change to reuse the
+         template for a different lab, founder, or contact details.
+         ========================================================= -->
+    <script>
+        const CONFIG = {
+            site: {
+                name: "RSV Lab",
+                url: "https://rsv8lab.github.io/",
+                logoUrl: "rsvlab-logo.png", // relative path — upload rsvlab-logo.png alongside index.html
+                bannerAlt: "RSV Lab banner",
+                copyrightYear: 2026
+            },
+            founder: {
+                name: "Kamol Das",
+                role: "Founder &amp; Principal Investigator",
+                bio: "MS student, Department of Microbiology, University of Chittagong, Bangladesh. Works at the intersection of AMR surveillance, clinical microbiology, and computational tools for AST analysis.",
+                avatarUrl: "https://github.com/KamolDas.png",
+                github: "https://github.com/KamolDas",
+                email: "kamol.mbio@gmail.com",
+                orcid: "https://orcid.org/0009-0004-2253-7527"
+            },
+            contact: {
+                location: ["University of Chittagong", "Chittagong, Bangladesh"],
+                emails: ["kamol.mbio@gmail.com", "20605032@std.cu.ac.bd"],
+                phones: ["01775-510351", "01867-771598"]
+            },
+            // Shown as icon links in the nav bar, footer, and as branded buttons in Contact
+            social: [
+                { key: "github", label: "RSV Lab GitHub", icon: "fab fa-github", url: "https://github.com/rsv8lab", color: "#1f2937", showInContact: false },
+                { key: "facebook", label: "Facebook", icon: "fab fa-facebook", url: "https://www.facebook.com/profile.php?id=100090153347276", color: "#1877F2", showInContact: true, contactText: "Follow RSV Lab for updates, news, and community posts.", contactCta: "Visit Page" },
+                { key: "youtube", label: "YouTube", icon: "fab fa-youtube", url: "https://www.youtube.com/@RSVLab", color: "#FF0000", showInContact: true, contactText: "Subscribe to our channel for tutorials, research talks, and lab updates.", contactCta: "Subscribe" }
+            ],
+            about: [
+                { icon: "fa-microscope", accent: "var(--primary-blue)", title: "Research &amp; Development", text: "Clinical microbiology, antimicrobial resistance (AMR) surveillance, and drug discovery, grounded in CLSI M100 and EUCAST breakpoint standards." },
+                { icon: "fa-laptop-code", accent: "var(--primary-orange)", title: "Bioinformatics &amp; Data Analysis", text: "Python and R-based tools for AST data structuring, MDR/XDR/PDR classification, and machine learning applications in AMR data." },
+                { icon: "fa-flask", accent: "var(--primary-purple)", title: "Biotechnology &amp; Pharma", text: "Applying scientific knowledge to real-world challenges in pharmaceuticals, quality control, and industrial biotechnology." }
+            ],
+            publications: [
+                { title: "An Integrated Computational Framework for Antimicrobial Susceptibility Testing", authors: "<strong>Kamol Das</strong> et al.", journal: "Zenodo Preprint, 2026", links: [{ label: "DOI", url: "https://doi.org/10.5281/zenodo.20589848" }] },
+                { title: "Machine Learning Analysis Reports for Microbial Data", authors: "<strong>Kamol Das</strong> et al.", journal: "Zenodo Dataset, 2026", links: [{ label: "DOI", url: "https://doi.org/10.5281/zenodo.21534293" }] },
+                { title: "RSV Lab Official Logo", authors: "<strong>Kamol Das</strong>", journal: "Zenodo, 2026", links: [{ label: "DOI", url: "https://doi.org/10.5281/zenodo.19209980" }] }
+            ],
+            projects: [
+                { category: "lab", icon: "fa-robot", accent: "var(--primary-blue)", title: "RSVLab-ASTLearn", text: "AST machine learning toolkit for predicting antimicrobial susceptibility.", link: "https://github.com/rsv8lab/RSVLab-ASTLearn" },
+                { category: "lab", icon: "fa-dna", accent: "var(--primary-orange)", title: "RSVLab-Bioinformatics", text: "DNA/RNA sequence analysis tools for genomic research.", link: "https://github.com/rsv8lab/RSVLab-Bioinformatics" },
+                { category: "lab", icon: "fa-database", accent: "var(--primary-purple)", title: "RSVLab-DNAStore", text: "RSV algorithm DNA-computing framework for data storage.", link: "https://github.com/rsv8lab/RSVLab-DNAStore" },
+                { category: "lab", icon: "fa-bacteria", accent: "var(--primary-blue)", title: "RSVLab-Microbiology", text: "CLSI, EUCAST, MPN, drug development &amp; discovery, and AST reference databases.", link: "https://github.com/rsv8lab/RSVLab-Microbiology" },
+                { category: "personal", icon: "fa-flask", accent: "var(--primary-orange)", title: "AST-Tool", text: "Python workflow for 2×2, 3×3, and 4×4 AST matrix agreement analysis — a CLSI-compliant method validation tool.", link: "https://github.com/KamolDas/AST-Tool" },
+                { category: "personal", icon: "fa-code", accent: "var(--primary-purple)", title: "DNA-sequence-for-data-store", text: "DNA-as-string and Unicode-text-based approaches for data storage.", link: "https://github.com/KamolDas/DNA-sequence-for-data-store" },
+                { category: "personal", icon: "fa-terminal", accent: "var(--primary-blue)", title: "C-basic", text: "Basic C programming practice and examples.", link: "https://github.com/KamolDas/C-basic" }
+            ]
+        };
+    </script>
+
+    <!-- =========================================================
+         RENDER ENGINE — generic, content-agnostic. Reads CONFIG
+         above and builds every section. Shouldn't need edits.
+         ========================================================= -->
+    <script>
+        const escapeAttr = (str) => String(str).replace(/"/g, "&quot;");
+
+        // Generic: render an array of items into a container using a template function
+        function renderInto(containerId, items, templateFn) {
+            const el = document.getElementById(containerId);
+            if (!el) return;
+            el.innerHTML = items.map(templateFn).join("");
+        }
+
+        // --- Nav logo + icons ---
+        document.getElementById("navLogoImg").src = CONFIG.site.logoUrl;
+        document.getElementById("navLogoImg").alt = CONFIG.site.name + " logo";
+        renderInto("navIcons", CONFIG.social, s =>
+            `<a href="${s.url}" target="_blank" rel="noopener" title="${escapeAttr(s.label)}" aria-label="${escapeAttr(s.label)}"><i class="${s.icon}"></i></a>`
+        );
+
+        // --- Hero banner + founder badge ---
+        document.getElementById("heroBanner").alt = CONFIG.site.bannerAlt;
+        document.getElementById("founderBadge").innerHTML = `
+            <img src="${CONFIG.founder.avatarUrl}" alt="${escapeAttr(CONFIG.founder.name)}" loading="lazy"
+                 onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(CONFIG.founder.name)}&background=FF8C00&color=fff&size=28'">
+            Founded by ${CONFIG.founder.name}
+        `;
+
+        // --- About cards ---
+        renderInto("aboutGrid", CONFIG.about, item => `
+            <div class="card" style="--card-accent: ${item.accent}">
+                <div class="card-icon"><i class="fas ${item.icon}"></i></div>
+                <h3 class="card-title">${item.title}</h3>
+                <p class="card-text">${item.text}</p>
+            </div>
+        `);
+
+        // --- Publications ---
+        renderInto("pubList", CONFIG.publications, pub => `
+            <div class="publication-item">
+                <h3 class="pub-title">${pub.title}</h3>
+                <p class="pub-authors">${pub.authors}</p>
+                <p class="pub-journal">${pub.journal}</p>
+                <div class="pub-links">
+                    ${pub.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener" class="pub-link">${l.label}</a>`).join("")}
+                </div>
+            </div>
+        `);
+
+        // --- Projects ---
+        renderInto("projectGrid", CONFIG.projects, proj => `
+            <div class="card project-card" data-category="${proj.category}" style="--card-accent: ${proj.accent}">
+                <div class="card-icon"><i class="fas ${proj.icon}"></i></div>
+                <h3 class="card-title">${proj.title}</h3>
+                <p class="card-text">${proj.text}</p>
+                <a href="${proj.link}" target="_blank" rel="noopener" class="card-link">View Repository <i class="fas fa-arrow-right"></i></a>
+            </div>
+        `);
+
+        function filterProjects(category, event) {
+            const items = document.querySelectorAll(".project-card");
+            const buttons = document.querySelectorAll(".project-tabs button");
+            buttons.forEach(btn => btn.classList.remove("active"));
+            if (event && event.target) event.target.classList.add("active");
+            items.forEach(item => {
+                item.style.display = (category === "all" || item.dataset.category === category) ? "flex" : "none";
+            });
+        }
+
+        // --- Founder section ---
+        document.getElementById("founderContainer").innerHTML = `
+            <img src="${CONFIG.founder.avatarUrl}" alt="${escapeAttr(CONFIG.founder.name)}" class="founder-avatar" loading="lazy"
+                 onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(CONFIG.founder.name)}&background=0A66C2&color=fff&size=200'">
+            <div class="founder-info">
+                <h3>${CONFIG.founder.name}</h3>
+                <p class="role">${CONFIG.founder.role}</p>
+                <p>${CONFIG.founder.bio}</p>
+                <div class="founder-social">
+                    <a href="${CONFIG.founder.github}" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:${CONFIG.founder.email}" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="${CONFIG.founder.orcid}" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+                </div>
+            </div>
+        `;
+
+        // --- Contact grid: location, emails, phones, then one card per social channel flagged showInContact ---
+        const contactCards = [
+            { icon: "fa-map-marker-alt", accent: "var(--primary-blue)", title: "Location", body: `<p class="contact-text">${CONFIG.contact.location.join("<br>")}</p>` },
+            { icon: "fa-envelope", accent: "var(--primary-orange)", title: "Email", body: `<p class="contact-text">${CONFIG.contact.emails.map(e => `<a href="mailto:${e}">${e}</a>`).join("<br>")}</p>` },
+            { icon: "fa-phone", accent: "var(--primary-purple)", title: "Phone", body: `<p class="contact-text">${CONFIG.contact.phones.join("<br>")}</p>` },
+            ...CONFIG.social.filter(s => s.showInContact).map(s => ({
+                icon: s.icon.split(" ")[1],
+                accent: s.color,
+                title: s.label,
+                body: `<p class="contact-text">${s.contactText}</p>
+                       <a href="${s.url}" target="_blank" rel="noopener" class="social-btn" style="background-color:${s.color}">
+                           <i class="${s.icon}"></i> ${s.contactCta}
+                       </a>`
+            }))
+        ];
+        renderInto("contactGrid", contactCards, c => `
+            <div class="contact-card" style="--card-accent:${c.accent}">
+                <div class="contact-icon"><i class="fas ${c.icon}"></i></div>
+                <h3 class="contact-title">${c.title}</h3>
+                ${c.body}
+            </div>
+        `);
+
+        // --- Footer ---
+        document.getElementById("footerCopyright").textContent = `\u00A9 ${CONFIG.site.copyrightYear} ${CONFIG.site.name}. All rights reserved.`;
+        const footerLinks = [
+            ...CONFIG.social.map(s => ({ url: s.url, label: s.label })),
+            { url: CONFIG.founder.github, label: "Founder GitHub" }
+        ];
+        renderInto("footerLinks", footerLinks, l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`);
+
+        // --- Mobile nav toggle ---
+        const navToggle = document.getElementById("navToggle");
+        const navLinks = document.getElementById("navLinks");
+        navToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", isOpen);
+        });
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
+
+</body>
+</html>
